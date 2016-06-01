@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar">
+<div class="row">
+<div class="top-bar-left">
+<ul class="dropdown menu" data-dropdown-menu="" role="menubar" data-dropdownmenu="y8akpt-dropdownmenu">
+<li class="menu-text" role="menuitem" tabindex="0">Menu</li>
+<li class="has-submenu is-dropdown-submenu-parent is-down-arrow" role="menuitem" tabindex="0" title="One" aria-haspopup="true">
+<a tabindex="-1">Qplan!</a>
+<ul class="submenu menu vertical is-dropdown-submenu first-sub" data-submenu="" aria-hidden="true" tabindex="-1" role="menu">
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="contact.html" tabindex="-1">Contact</a></li>
+<li role="menuitem" class="is-submenu-item is-dropdown-submenu-item" tabindex="0"><a href="#" tabindex="-1">Who we are</a></li>
+</ul>
+</li>
+<li role="menuitem" tabindex="0"><a href="plans.html" tabindex="-1">Plans</a></li>
+<li role="menuitem" tabindex="0"><a href="#" tabindex="-1">Companies</a></li>
+</ul>
+</div>
+<div class="top-bar-right">
+<ul class="menu">
+<li><input type="search" placeholder="Search"></li>
+<li><button type="button" class="button">Search</button></li>
+</ul>
+</div>
+</div>
+</div>
+ 
+<div class="callout large">
+<div class="row column text-center">
+<h1>Qplan!</h1>
+<p class="lead">Changing your world with our plans</p>
+<a href="contact.html" class="button large hollow">Contact</a>
+<a href="#" class="button large hollow">Who we are</a>
+<a href="plans.html" class="button large hollow">Plans</a>
+<a href="#" class="button large hollow">Companies</a>
+</div>
+<hr>
+
+<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+<ul class="orbit-container" tabindex="0" style="height: 479px;">
+<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+<li class="orbit-slide" data-slide="0" >
+<img src="/assets/img/o1.jpg">
+</li>
+<li class="orbit-slide" data-slide="1" >
+<img text="Qplan!" src="/assets/img/o2.jpg">
+</li>
+<li class="orbit-slide" data-slide="2" >
+<img src="/assets/img/o3.jpg">
+</li>
+<li class="orbit-slide" data-slide="3" >
+<img src="/assets/img/o4.jpg">
+</li>
+</ul>
+</div>
+
+<hr>
+<div class="row column">
+<h3>Our recent plans!</h3>
+<%= yield%>
+</div>
+<div class="row medium-up-3 large-up-4">
+<div class="column">
+<img href="contact.html" class="thumbnail" src="/assets/img/1.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/2.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/3.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/4.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/5.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/6.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/7.jpg">
+</div>
+<div class="column">
+<img class="thumbnail" src="/assets/img/8.jpg">
+</div>
+
+<hr>
+<div class="row column">
+<ul class="menu">
+<li><a href="contact.html" tabindex="-1">Contact</a></li>
+</ul>
+</div>
+
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  </body>
+</html>
+

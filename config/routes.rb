@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  resources :news
+
+  get 'rake/route:company'
+
+  resources :plans
+
   get '/landing' => 'home#landing'
 
   get '/contact' => 'home#contact'
 
   get '/whoweare' => 'home#who'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
