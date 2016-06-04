@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :news
-
-  get 'rake/route:company'
 
   resources :plans
 
