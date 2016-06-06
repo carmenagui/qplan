@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
 
+  resources :users
   resources :plans
 
   get '/landing' => 'home#landing'
 
-  get '/contact' => 'home#contact'
+  get '/home' => 'home#landing'
 
-  get '/whoweare' => 'home#who'
+  get '/about' => 'about#about'
 
+  get '/contact' => 'contact#contact'
+
+  get '/plans' => 'plans#list'
+
+  get '/users' => 'users#new'
+
+  get '/users' => 'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
