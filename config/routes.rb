@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :companies
   resources :users
   resources :plans
 
@@ -13,9 +14,9 @@ Rails.application.routes.draw do
 
   get '/plans' => 'plans#list'
 
-  get '/users' => 'users#new'
+  get '/users' => 'users#users'
 
-  get '/users' => 'users#index'
+   get '/users' => 'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
